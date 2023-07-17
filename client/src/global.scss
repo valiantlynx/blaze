@@ -1,0 +1,195 @@
+@import './scss/variables';
+@import './scss/mixins';
+
+* {
+  box-sizing: border-box;
+}
+::selection {
+  background-color: rgba($primary, 0.7);
+  color: $bg;
+}
+
+.h-full {
+  height: 100%;
+}
+
+html,
+body {
+  @extend .h-full;
+}
+
+body,
+input,
+button {
+  font-family: $font;
+  color: $white;
+}
+
+body {
+  @include noise-background;
+  margin: 0;
+  padding: 0;
+  color: $light;
+
+  a {
+    text-decoration: none;
+    color: $light;
+
+    &:hover {
+      color: $primary;
+    }
+  }
+
+  &.no-bg-image {
+    background-image: none;
+  }
+}
+
+h1,
+h2,
+h3,
+h4,
+h5,
+h6 {
+  font-weight: $font-bold;
+  margin: 0;
+}
+
+button {
+  border: 0;
+  outline: none;
+  background-color: transparent;
+  cursor: pointer;
+  user-select: none;
+}
+
+.btn {
+  color: $bg;
+  background-color: $primary;
+  padding: 0 25px;
+  margin: 0;
+  border-radius: 4px;
+  font-size: 1.4rem;
+  display: inline-flex;
+  align-items: center;
+  justify-content: center;
+
+  height: 50px;
+  box-shadow: $shadow;
+
+  transition: all 0.2s ease;
+
+  -webkit-tap-highlight-color: rgba(darken($primary, 50), 0.2);
+
+  &:hover {
+    color: $bg;
+    box-shadow: 0 8px 35px rgba($primary, 0.2);
+  }
+
+  &:active {
+    transform: scale(0.98);
+  }
+
+  &:focus {
+    opacity: 0.7;
+  }
+
+  &.wide {
+    width: 100%;
+  }
+
+  &.small {
+    padding: 0 18px;
+    height: 36px;
+    font-size: 1.125rem;
+  }
+
+  &.thin {
+    background-color: transparent;
+    box-shadow: none;
+    color: $secondary;
+    padding: 0;
+
+    &:hover,
+    &:focus {
+      color: $light;
+    }
+  }
+
+  &.outlined {
+    background-color: $bg;
+    color: $primary;
+    box-shadow: 0 0 0 1px $primary, $shadow;
+  }
+
+  &:disabled {
+    opacity: 0.5;
+    cursor: not-allowed;
+    pointer-events: none;
+    box-shadow: none;
+
+    &.outlined {
+      box-shadow: 0 0 0 1px $primary;
+    }
+  }
+
+  &.icon {
+    width: 50px;
+    font-size: 2rem;
+    transform: none;
+  }
+}
+
+input {
+  background-color: transparent;
+  border: 1px solid rgba($secondary, 0.6);
+  padding: 12px 18px;
+  border-radius: 4px;
+  font-size: 1.25rem;
+  color: $light;
+  outline: none;
+  margin: 15px 0;
+  width: 100%;
+
+  transition: all 0.2s ease;
+  box-shadow: $shadow inset;
+
+  &:focus {
+    border-color: lighten($secondary, 15);
+  }
+
+  &::-webkit-input-placeholder {
+    color: $secondary;
+  }
+}
+
+img,
+svg {
+  user-select: none;
+  vertical-align: middle;
+}
+
+.fade-enter {
+  opacity: 0;
+}
+
+.fade-enter.fade-enter-active {
+  opacity: 1;
+  transition: all 200ms ease-in;
+}
+
+.fade-exit {
+  opacity: 1;
+}
+
+.fade-exit.fade-exit-active {
+  opacity: 0;
+  transition: all 200ms ease-out;
+}
+
+.divider {
+  border: none;
+  height: 1px;
+  background-color: rgba($secondary, 0.6);
+  margin: 30px 25%;
+}

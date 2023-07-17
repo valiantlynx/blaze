@@ -1,0 +1,27 @@
+{
+  "name": "blaze-server",
+  "version": "3.0.1",
+  "description": "Quickly share files with multiple users",
+  "private": true,
+  "scripts": {
+    "dev": "nodemon index",
+    "start": "sucrase-node index"
+  },
+  "author": "Akash Hamirwasia",
+  "license": "MIT",
+  "dependencies": {
+    "cors": "^2.8.5",
+    "express": "^4.18.2",
+    "nanoid": "^3.3.4",
+    "project-name-generator": "^2.1.9",
+    "qrcode": "^1.5.1",
+    "sucrase": "^3.29.0",
+    "ws": "^7.5.9"
+  },
+  "engines": {
+    "node": "16.x"
+  },
+  "devDependencies": {
+    "nodemon": "^2.0.20"
+  }
+}

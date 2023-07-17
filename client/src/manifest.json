@@ -1,0 +1,73 @@
+{
+  "short_name": "Blaze",
+  "name": "Blaze",
+  "icons": [
+    {
+      "src": "/assets/images/icon-192.png",
+      "type": "image/png",
+      "sizes": "192x192"
+    },
+    {
+      "src": "/assets/images/icon-512.png",
+      "type": "image/png",
+      "sizes": "512x512"
+    },
+    {
+      "src": "/assets/images/icon-192-maskable.png",
+      "type": "image/png",
+      "sizes": "192x192",
+      "purpose": "maskable"
+    },
+    {
+      "src": "/assets/images/icon-512-maskable.png",
+      "type": "image/png",
+      "sizes": "512x512",
+      "purpose": "maskable"
+    }
+  ],
+  "start_url": "/app/?utm_medium=PWA&utm_source=launcher",
+  "background_color": "#0D1322",
+  "theme_color": "#0D1322",
+  "display": "standalone",
+  "share_target": {
+    "action": "/app/?utm_medium=PWA&utm_source=share-target&share-target",
+    "method": "POST",
+    "enctype": "multipart/form-data",
+    "params": {
+      "title": "title",
+      "text": "text",
+      "files": [
+        {
+          "name": "files",
+          "accept": "*/*"
+        }
+      ]
+    }
+  },
+  "shortcuts": [
+    {
+      "name": "Join Instant Room",
+      "short_name": "Instant Room",
+      "description": "Quickly join a room created just for you!",
+      "url": "/app/instant/join",
+      "icons": [
+        {
+          "src": "/assets/images/instant-room-shortcut.png",
+          "sizes": "192x192"
+        }
+      ]
+    },
+    {
+      "name": "Join Local Network Room",
+      "short_name": "Local Network Room",
+      "description": "Share files with devices in your local network",
+      "url": "/app/t/",
+      "icons": [
+        {
+          "src": "/assets/images/local-room-shortcut.png",
+          "sizes": "192x192"
+        }
+      ]
+    }
+  ]
+}
